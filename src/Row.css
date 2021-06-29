@@ -1,0 +1,33 @@
+.row{
+    margin-left: 20px; /*will shift row to right*/
+    color: blanchedalmond;
+}
+.row_posters{
+    display: flex;
+    overflow-y:hidden;
+    overflow-x: scroll; /*for scrolling left to right a specific row*/
+    padding: 20px;/*for transform do it dont get out*/
+}
+.row_posters::-webkit-scrollbar{
+    display: none;
+    /*will not show scrollbar but keep its functionality*/
+}
+
+.row__poster{
+    object-fit:contain;
+    width:100%;
+    margin-right: 10px;
+    max-height: 100px;
+    transition:transform 450ms;/*if u rmove transition then transform effect will be instant but if u dont then it will be silky*/
+}
+.row__poster:hover{
+    transform:scale(1.08); 
+
+}
+.row__posterLarge{
+    max-height: 250px;
+}
+.row__posterLarge:hover{
+    transform:scale(1.09); 
+}
+
